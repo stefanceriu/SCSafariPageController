@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name     = 'SCSafariPageController'
   s.version  = '1.0.0'
   s.platform = :ios
-  s.ios.deployment_target = '5.0'
+  s.ios.deployment_target = '8.0'
 
   s.summary  = 'SCSafariPageController page view controller component that reproduces the behavior seen in Mobile Safari\'s tab switcher'
   s.description = <<-DESC
