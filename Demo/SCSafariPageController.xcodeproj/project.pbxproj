@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0335F20B5E56AD1B272CD8AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1189167AC046E5079FA9344A /* libPods.a */; };
+		183105D51B527FFE0070A3C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183105C91B527FFE0070A3C1 /* AppDelegate.m */; };
+		183105D61B527FFE0070A3C1 /* SCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183105CB1B527FFE0070A3C1 /* SCRootViewController.m */; };
+		183105D71B527FFE0070A3C1 /* SCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183105CC1B527FFE0070A3C1 /* SCRootViewController.xib */; };
+		183105D81B527FFE0070A3C1 /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183105CE1B527FFE0070A3C1 /* SCViewController.m */; };
+		183105D91B527FFE0070A3C1 /* SCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183105CF1B527FFE0070A3C1 /* SCViewController.xib */; };
+		183105DA1B527FFE0070A3C1 /* feathers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 183105D11B527FFE0070A3C1 /* feathers.jpg */; };
+		183105DC1B527FFE0070A3C1 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183105D31B527FFE0070A3C1 /* Launch Screen.xib */; };
+		183105DD1B527FFE0070A3C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 183105D41B527FFE0070A3C1 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1189167AC046E5079FA9344A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		181957FA1B37D8A400474C45 /* SCSafariPageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCSafariPageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183105C81B527FFE0070A3C1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		183105C91B527FFE0070A3C1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		183105CA1B527FFE0070A3C1 /* SCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRootViewController.h; sourceTree = "<group>"; };
+		183105CB1B527FFE0070A3C1 /* SCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRootViewController.m; sourceTree = "<group>"; };
+		183105CC1B527FFE0070A3C1 /* SCRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCRootViewController.xib; sourceTree = "<group>"; };
+		183105CD1B527FFE0070A3C1 /* SCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
+		183105CE1B527FFE0070A3C1 /* SCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
+		183105CF1B527FFE0070A3C1 /* SCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCViewController.xib; sourceTree = "<group>"; };
+		183105D11B527FFE0070A3C1 /* feathers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feathers.jpg; sourceTree = "<group>"; };
+		183105D21B527FFE0070A3C1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183105D31B527FFE0070A3C1 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		183105D41B527FFE0070A3C1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3ADC0C77FAB74B16612DF99D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		56D3E2710F24CDAF0595CA0B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		181957F71B37D8A400474C45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0335F20B5E56AD1B272CD8AB /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1657FDEB5A14862F12A250F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1189167AC046E5079FA9344A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		181957F11B37D8A400474C45 = {
+			isa = PBXGroup;
+			children = (
+				183105C71B527FFE0070A3C1 /* Demo */,
+				181957FB1B37D8A400474C45 /* Products */,
+				BC8FA4BA7F8E0EF95ADB943E /* Pods */,
+				1657FDEB5A14862F12A250F7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		181957FB1B37D8A400474C45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				181957FA1B37D8A400474C45 /* SCSafariPageController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		183105C71B527FFE0070A3C1 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				183105C81B527FFE0070A3C1 /* AppDelegate.h */,
+				183105C91B527FFE0070A3C1 /* AppDelegate.m */,
+				183105CA1B527FFE0070A3C1 /* SCRootViewController.h */,
+				183105CB1B527FFE0070A3C1 /* SCRootViewController.m */,
+				183105CC1B527FFE0070A3C1 /* SCRootViewController.xib */,
+				183105CD1B527FFE0070A3C1 /* SCViewController.h */,
+				183105CE1B527FFE0070A3C1 /* SCViewController.m */,
+				183105CF1B527FFE0070A3C1 /* SCViewController.xib */,
+				183105D01B527FFE0070A3C1 /* Supporting Files */,
+			);
+			name = Demo;
+			path = SCSafariPageController;
+			sourceTree = "<group>";
+		};
+		183105D01B527FFE0070A3C1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				183105D11B527FFE0070A3C1 /* feathers.jpg */,
+				183105D21B527FFE0070A3C1 /* Info.plist */,
+				183105D31B527FFE0070A3C1 /* Launch Screen.xib */,
+				183105D41B527FFE0070A3C1 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC8FA4BA7F8E0EF95ADB943E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ADC0C77FAB74B16612DF99D /* Pods.debug.xcconfig */,
+				56D3E2710F24CDAF0595CA0B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		181957F91B37D8A400474C45 /* SCSafariPageController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1819581D1B37D8A400474C45 /* Build configuration list for PBXNativeTarget "SCSafariPageController" */;
+			buildPhases = (
+				4E43D6E81B4B1EED0681095D /* Check Pods Manifest.lock */,
+				181957F61B37D8A400474C45 /* Sources */,
+				181957F71B37D8A400474C45 /* Frameworks */,
+				181957F81B37D8A400474C45 /* Resources */,
+				DAD03FFA199F26CC2517CE96 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCSafariPageController;
+			productName = SCSafariTabSwitcher;
+			productReference = 181957FA1B37D8A400474C45 /* SCSafariPageController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		181957F21B37D8A400474C45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Stefan Ceriu";
+				TargetAttributes = {
+					181957F91B37D8A400474C45 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 181957F51B37D8A400474C45 /* Build configuration list for PBXProject "SCSafariPageController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 181957F11B37D8A400474C45;
+			productRefGroup = 181957FB1B37D8A400474C45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				181957F91B37D8A400474C45 /* SCSafariPageController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		181957F81B37D8A400474C45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183105DA1B527FFE0070A3C1 /* feathers.jpg in Resources */,
+				183105D91B527FFE0070A3C1 /* SCViewController.xib in Resources */,
+				183105D71B527FFE0070A3C1 /* SCRootViewController.xib in Resources */,
+				183105DC1B527FFE0070A3C1 /* Launch Screen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E43D6E81B4B1EED0681095D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD03FFA199F26CC2517CE96 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		181957F61B37D8A400474C45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183105D61B527FFE0070A3C1 /* SCRootViewController.m in Sources */,
+				183105D81B527FFE0070A3C1 /* SCViewController.m in Sources */,
+				183105DD1B527FFE0070A3C1 /* main.m in Sources */,
+				183105D51B527FFE0070A3C1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1819581B1B37D8A400474C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1819581C1B37D8A400474C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1819581E1B37D8A400474C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ADC0C77FAB74B16612DF99D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = "SCSafariPageController/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = SCSafariPageController;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1819581F1B37D8A400474C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D3E2710F24CDAF0595CA0B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = "SCSafariPageController/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = SCSafariPageController;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		181957F51B37D8A400474C45 /* Build configuration list for PBXProject "SCSafariPageController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1819581B1B37D8A400474C45 /* Debug */,
+				1819581C1B37D8A400474C45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1819581D1B37D8A400474C45 /* Build configuration list for PBXNativeTarget "SCSafariPageController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1819581E1B37D8A400474C45 /* Debug */,
+				1819581F1B37D8A400474C45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 181957F21B37D8A400474C45 /* Project object */;
+}
