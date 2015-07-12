@@ -12,8 +12,6 @@
 #import "SCSafariZoomedInLayouter.h"
 #import "SCSafariZoomedOutLayouter.h"
 
-#import "SCEasingFunction.h"
-
 #import "SCSafariPageWrapperViewController.h"
 
 @interface SCSafariPageController () <SCPageViewControllerDataSource, SCPageViewControllerDelegate, SCSafariPageWrapperViewControllerDelegate>
@@ -54,7 +52,6 @@
 	[self.pageViewController setPagingEnabled:NO];
 	[self.pageViewController setContinuousNavigationEnabled:YES];
 	[self.pageViewController setAnimationDuration:0.35f];
-	[self.pageViewController setEasingFunction:[SCEasingFunction easingFunctionWithType:SCEasingFunctionTypeSineEaseInOut]];
 }
 
 #pragma mark - Public
