@@ -6,9 +6,10 @@ SCSafariPageController page view controller component that reproduces the behavi
 Features:
 
 - can zoom out, partially overlap and lean in pages similar to Safari
-- allows swipe to delete for one or multiple pages at the same time
+- can zoom in and focus on any of the pages and animates the layout change
+- allows swipe to delete on one or multiple pages at the same time
+- dynamically adapts the inter-item spacings and page angles based on the total number of pages, even while swiping to delete
 - increases the page angles when scrolling outside its bounds
-- can zoom into any of the pages 
 - supports incremental updates
 
 and all the rest of the [SCPageViewController](https://github.com/stefanceriu/SCPageViewController) niceties.
@@ -18,13 +19,13 @@ and all the rest of the [SCPageViewController](https://github.com/stefanceriu/SC
 
 ### Implementation details
 
-SCSafariPageController is built on top of [SCPageViewController](https://github.com/stefanceriu/SCPageViewController) and makes use of custom page layouters to get the desired effect.
+SCSafariPageController is built on top of [SCPageViewController](https://github.com/stefanceriu/SCPageViewController) and makes use of custom page layouters to get the desired effects.
 
 It wraps view controllers inside the scroll view based SCSafariPageWrapperViewController to get the slide to delete feature and then applies variable inter-item spacings and sublayer transforms (angle, perspective and scale) to the pages, based on the total number of pages and the content offset.
 
 ### Usage
 
-- Create a new instance and implement its data source and delegate
+- Create a new instance and register as its data source and, optionally, delegate
 
 ```objc
     self.safariPageController = [[SCSafariPageController alloc] init];
@@ -32,12 +33,28 @@ It wraps view controllers inside the scroll view based SCSafariPageWrapperViewCo
 	[self.safariPageController setDelegate:self];
 ```
 
-- Implement the SCSafariPageControllerDateSource protocol which defines the total number of pages and the view controllers to be used for each of them.
+- Implement the SCSafariPageControllerDateSource protocol to define the total number of pages and the view controllers to be used for each of them
 
 ```
 - (NSUInteger)numberOfPagesInPageController:(SCSafariPageController *)pageController;
 
 - (UIViewController *)pageController:(SCSafariPageController *)pageController viewControllerForPageAtIndex:(NSUInteger)index;
+```
+
+- Optionally, listen to any of the following delegate events
+
+```
+- (void)pageController:(SCSafariPageController *)pageController didShowViewController:(UIViewController *)controller atIndex:(NSUInteger)index;
+
+- (void)pageController:(SCSafariPageController *)pageController didHideViewController:(UIViewController *)controller atIndex:(NSUInteger)index;
+			  
+- (void)pageController:(SCSafariPageController *)pageController didNavigateToOffset:(CGPoint)offset;
+   
+- (void)pageController:(SCSafariPageController *)pageController didNavigateToPageAtIndex:(NSUInteger)pageIndex;
+
+- (void)pageController:(SCSafariPageController *)pageController willDeletePageAtIndex:(NSUInteger)pageIndex;
+
+- (void)pageController:(SCSafariPageController *)pageController didDeletePageAtIndex:(NSUInteger)pageIndex;
 ```
 
 - Zoom in and out
@@ -48,7 +65,7 @@ It wraps view controllers inside the scroll view based SCSafariPageWrapperViewCo
 - (void)zoomIntoPageAtIndex:(NSUInteger)index animated:(BOOL)animated completion:(void(^)())completion;
 ```
 
-- SCSafariPageController also supports incremental updates and all the animations are customizable through the layouter.
+- SCSafariPageController also supports incremental updates with animations that are customizable through its active layouter
 
 ```objc
 	[self.safariPageController insertPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:^(void)completion];
