@@ -1,3 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'SCSafariPageController', :path => '../'
+target 'ObjCDemo' do
+ 	pod 'SCSafariPageController', :path => '../'
+end
+
+target 'SwiftDemo' do
+	pod 'SCSafariPageController', :path => '../'
+end

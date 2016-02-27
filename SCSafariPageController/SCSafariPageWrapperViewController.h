@@ -37,7 +37,7 @@
  * @param viewController The view controller that should be
  * wrapped inside the scroll view
  */
-- (instancetype)initWithViewController:(UIViewController *)viewController NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithViewController:(UIViewController *)viewController;
 
 @end
 

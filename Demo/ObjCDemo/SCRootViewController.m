@@ -49,6 +49,14 @@ static const NSUInteger kDefaultNumberOfPages = 6;
 	[self.addButton setAlpha:0.0f];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.safariPageController zoomOutAnimated:YES completion:nil];
+}
+
+
 - (IBAction)onZoomButtonTap:(id)sender
 {
 	[self _toggleZoomWithPageIndex:self.safariPageController.currentPage];

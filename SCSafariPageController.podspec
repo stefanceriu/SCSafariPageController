@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SCSafariPageController'
-  s.version  = '1.0.1'
+  s.version  = '1.0.2'
   s.platform = :ios
   s.ios.deployment_target = '8.0'
 
