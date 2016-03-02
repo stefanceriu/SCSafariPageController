@@ -160,7 +160,7 @@
  *
  * @param pageController The calling page controller
  * @param controller The view controller that became visible
- * @param position The position where the view controller resides
+ * @param index The position where the view controller resides
  *
  */
 - (void)pageController:(SCSafariPageController *)pageController
