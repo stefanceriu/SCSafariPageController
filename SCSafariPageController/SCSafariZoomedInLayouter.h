@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Stefan Ceriu. All rights reserved.
 //
 
-#import "SCPageLayouter.h"
+#import <SCPageViewController/SCPageLayouter.h>
 
 /** A SCPageViewController layouter that lays out pages vertically and fullscreen */
 @interface SCSafariZoomedInLayouter : SCPageLayouter

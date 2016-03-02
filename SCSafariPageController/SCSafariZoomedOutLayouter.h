@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Stefan Ceriu. All rights reserved.
 //
 
-#import "SCPageLayouterProtocol.h"
+#import <SCPageViewController/SCPageLayouterProtocol.h>
 
 /** A SCPageViewController page layouter that lays out
  * pages vertically and tilts them to an angle based
