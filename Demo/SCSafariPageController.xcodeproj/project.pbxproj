@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0335F20B5E56AD1B272CD8AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1189167AC046E5079FA9344A /* libPods.a */; };
 		183001ED1C7A1E0E00A5D229 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183001E11C7A1E0E00A5D229 /* AppDelegate.m */; };
 		183001EE1C7A1E0E00A5D229 /* SCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183001E31C7A1E0E00A5D229 /* SCRootViewController.m */; };
 		183001EF1C7A1E0E00A5D229 /* SCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183001E41C7A1E0E00A5D229 /* SCRootViewController.xib */; };
@@ -61,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0335F20B5E56AD1B272CD8AB /* libPods.a in Frameworks */,
 				A78E5186B1B5726C4785FA44 /* libPods-ObjCDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
