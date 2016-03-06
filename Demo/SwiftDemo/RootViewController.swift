@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCSafariPageController
 
 class RootViewController: UIViewController, SCSafariPageControllerDataSource, SCSafariPageControllerDelegate, ViewControllerDelegate {
     

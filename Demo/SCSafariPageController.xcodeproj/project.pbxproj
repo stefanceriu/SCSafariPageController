@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0982D9662C93FA368DD19F3F /* Pods_ObjCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AC511A01A1809D4BE70B6A /* Pods_ObjCDemo.framework */; };
 		183001ED1C7A1E0E00A5D229 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183001E11C7A1E0E00A5D229 /* AppDelegate.m */; };
 		183001EE1C7A1E0E00A5D229 /* SCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183001E31C7A1E0E00A5D229 /* SCRootViewController.m */; };
 		183001EF1C7A1E0E00A5D229 /* SCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183001E41C7A1E0E00A5D229 /* SCRootViewController.xib */; };
@@ -21,8 +22,7 @@
 		187968B71C7A231E0037631B /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187968B61C7A231E0037631B /* RootViewController.xib */; };
 		18A16C271C81B95500C2F543 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183002DE1C7A1F9600A5D229 /* ViewController.xib */; };
 		18A16C281C81B96E00C2F543 /* feathers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 183002BB1C7A1EF400A5D229 /* feathers.jpg */; };
-		801A172879179A6568658248 /* libPods-SwiftDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D40732DE1623EA265E548A9D /* libPods-SwiftDemo.a */; };
-		A78E5186B1B5726C4785FA44 /* libPods-ObjCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6338F24E66EA58767911B5D5 /* libPods-ObjCDemo.a */; };
+		CD2010BE8FDEC508A6D7E9FB /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA6CDB0A7E3A2AA1ABAB0D6 /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +50,9 @@
 		187968B21C7A21A10037631B /* Pods-ObjCDemo.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ObjCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCDemo/Pods-ObjCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		187968B31C7A21A10037631B /* Pods-ObjCDemo.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ObjCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCDemo/Pods-ObjCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		187968B61C7A231E0037631B /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
-		6338F24E66EA58767911B5D5 /* libPods-ObjCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BDE86E2C2BFEF93A0F2D01 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
-		D40732DE1623EA265E548A9D /* libPods-SwiftDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91AC511A01A1809D4BE70B6A /* Pods_ObjCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA6CDB0A7E3A2AA1ABAB0D6 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78E5186B1B5726C4785FA44 /* libPods-ObjCDemo.a in Frameworks */,
+				0982D9662C93FA368DD19F3F /* Pods_ObjCDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801A172879179A6568658248 /* libPods-SwiftDemo.a in Frameworks */,
+				CD2010BE8FDEC508A6D7E9FB /* Pods_SwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				1189167AC046E5079FA9344A /* libPods.a */,
-				6338F24E66EA58767911B5D5 /* libPods-ObjCDemo.a */,
-				D40732DE1623EA265E548A9D /* libPods-SwiftDemo.a */,
+				91AC511A01A1809D4BE70B6A /* Pods_ObjCDemo.framework */,
+				FBA6CDB0A7E3A2AA1ABAB0D6 /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
