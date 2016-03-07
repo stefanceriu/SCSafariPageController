@@ -36,6 +36,10 @@
 	return self;
 }
 
+- (NSBundle *)nibBundle {
+    return [NSBundle bundleForClass:[self class]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
