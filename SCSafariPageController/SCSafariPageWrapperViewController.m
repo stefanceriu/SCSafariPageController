@@ -14,18 +14,13 @@
 
 @interface SCSafariPageWrapperViewController () <UIScrollViewDelegate>
 
-@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @property (nonatomic, strong) UIViewController *childViewController;
 
 @end
 
 @implementation SCSafariPageWrapperViewController
-
-- (void)dealloc
-{
-	[self.scrollView setDelegate:nil];
-}
 
 - (instancetype)initWithViewController:(UIViewController *)viewController
 {
@@ -36,29 +31,42 @@
 	return self;
 }
 
-- (NSBundle *)nibBundle {
-    return [NSBundle bundleForClass:[self class]];
+- (void)loadView
+{
+    self.view = [[SCSafariPageWrapperViewControllerView alloc] init];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    
+    [self.view setBackgroundColor:[UIColor clearColor]];
+    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 	[self.view setFrame:self.childViewController.view.frame];
+    
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.scrollView setDelegate:self];
+    [self.scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [self.scrollView setShowsVerticalScrollIndicator:NO];
+    [self.scrollView setShowsHorizontalScrollIndicator:NO];
+    [self.scrollView setBackgroundColor:[UIColor clearColor]];
+    [self.scrollView setClipsToBounds:NO];
+    [self.scrollView setScrollEnabled:self.scrollEnabled];
+    [self.scrollView setPagingEnabled:YES];
+    [self.scrollView setDirectionalLockEnabled:YES];
+    [self.view addSubview:self.scrollView];
 	
 	[self addChildViewController:self.childViewController];
 	[self.scrollView addSubview:self.childViewController.view];
 	[self.childViewController.view setFrame:self.scrollView.bounds];
 	[self.childViewController didMoveToParentViewController:self];
-	
-	[self.scrollView setScrollEnabled:self.scrollEnabled];
 }
 
 - (void)viewWillLayoutSubviews
 {
 	[super viewWillLayoutSubviews];
 	
-	[self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.view.bounds) * 2, 0)];
+	[self.scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.view.bounds) * 2.0f, 0.0f)];
 }
 
 - (void)setScrollEnabled:(BOOL)scrollEnabled

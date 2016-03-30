@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SCSafariPageController'
-  s.version  = '1.0.3'
+  s.version  = '1.0.4'
   s.platform = :ios
   s.ios.deployment_target = '8.0'
 
@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/stefanceriu/SCSafariPageController.git', :tag => "v#{s.version}" }
   s.license = { :type => 'MIT License', :file => 'LICENSE' }
   s.source_files  = 'SCSafariPageController/**/*.{h,m}'
-  s.resources  = 'SCSafariPageController/**/*.xib'
 
   s.dependency 'SCPageViewController'
 
