@@ -9,8 +9,8 @@
 import UIKit
 
 @objc protocol ViewControllerDelegate {
-    optional func viewControllerDidReceiveTap(viewController:ViewController)
-    optional func viewControllerDidRequestDelete(viewController:ViewController)
+    @objc optional func viewControllerDidReceiveTap(_ viewController:ViewController)
+    @objc optional func viewControllerDidRequestDelete(_ viewController:ViewController)
 }
 
 class ViewController: UIViewController {
@@ -26,35 +26,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("onBackgroundTap:"))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.onBackgroundTap(_:)))
         self.backgroundImageView.addGestureRecognizer(tapGesture)
     }
 
-    func setHeaderVisible(visible:Bool, animated:Bool) {
+    func setHeaderVisible(_ visible:Bool, animated:Bool) {
         self.headerVisible = visible
         
-        if self.viewIfLoaded == false {
+        if self.isViewLoaded == false {
             return
         }
         
-        UIView.animateWithDuration((animated ? 0.25 : 0.0), animations: {
+        UIView.animate(withDuration: (animated ? 0.25 : 0.0), animations: {
             self.deleteButton?.alpha = (visible ? 1.0 : 0.0)
         })
     }
     
-    @IBAction private func onDeleteButtonTap(sender:UIButton) {
+    @IBAction fileprivate func onDeleteButtonTap(_ sender:UIButton) {
         self.delegate?.viewControllerDidRequestDelete?(self)
     }
     
-    func onBackgroundTap(tapGesture:UITapGestureRecognizer) {
+    func onBackgroundTap(_ tapGesture:UITapGestureRecognizer) {
         self.delegate?.viewControllerDidReceiveTap?(self)
     }
 }
 
 class ViewControllerView: UIView {
     
-    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
-        let hitView = super.hitTest(point, withEvent: event)
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let hitView = super.hitTest(point, with: event)
         
         if hitView == self {
             return nil

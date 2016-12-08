@@ -82,7 +82,7 @@
 							  pageViewController:(SCPageViewController *)pageViewController
 {
 	CGRect finalFrame = [self finalFrameForPageAtIndex:index pageViewController:pageViewController];
-	return [self sublayerTransformForPageWithFrame:finalFrame totalNumberOfPages:pageViewController.numberOfPages contentOffset:contentOffset];
+	return [self _sublayerTransformForPageWithFrame:finalFrame totalNumberOfPages:pageViewController.numberOfPages contentOffset:contentOffset];
 }
 
 - (void)animatePageInsertionAtIndex:(NSUInteger)index
@@ -91,7 +91,7 @@
 						 completion:(void (^)())completion
 {
 	CGRect frame = viewController.view.frame;
-	CATransform3D sublayerTransform = [self sublayerTransformForPageWithFrame:frame totalNumberOfPages:pageViewController.numberOfPages contentOffset:CGPointZero];
+	CATransform3D sublayerTransform = [self _sublayerTransformForPageWithFrame:frame totalNumberOfPages:pageViewController.numberOfPages contentOffset:CGPointZero];
 	
 	[viewController.view setFrame:CGRectOffset(frame, 0.0f, CGRectGetHeight(frame))];
 	[viewController.view setAlpha:0.0f];
@@ -129,9 +129,11 @@
 	}
 }
 
-- (CATransform3D)sublayerTransformForPageWithFrame:(CGRect)frame
-								totalNumberOfPages:(CGFloat)numberOfPages
-									 contentOffset:(CGPoint)contentOffset
+#pragma mark - Private
+
+- (CATransform3D)_sublayerTransformForPageWithFrame:(CGRect)frame
+                                 totalNumberOfPages:(CGFloat)numberOfPages
+                                      contentOffset:(CGPoint)contentOffset
 {
 	CATransform3D transform = CATransform3DIdentity;
 	transform.m34 = 1.0 / 900.0f;
