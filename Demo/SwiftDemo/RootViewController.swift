@@ -33,8 +33,6 @@ class RootViewController: UIViewController, SCSafariPageControllerDataSource, SC
         self.safariPageController.view.frame = self.view.bounds
         self.view.insertSubview(self.safariPageController.view, at: 0)
         self.safariPageController.didMove(toParentViewController: self)
-        
-        self.addButton.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -45,8 +45,6 @@ static const NSUInteger kDefaultNumberOfPages = 6;
 	[self.view insertSubview:self.safariPageController.view atIndex:0];
 	[self.safariPageController.view setFrame:self.view.bounds];
 	[self.safariPageController didMoveToParentViewController:self];
-	
-	[self.addButton setAlpha:0.0f];
 }
 
 - (void)viewDidAppear:(BOOL)animated
