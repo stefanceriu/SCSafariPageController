@@ -15,7 +15,7 @@ Features:
 and all the rest of the [SCPageViewController](https://github.com/stefanceriu/SCPageViewController) niceties.
 
 
-![](https://dl.dropboxusercontent.com/u/12748201/Recordings/SCSafariPageController/v1.0.0/SCSafariPageController%201.0.0.gif)
+![](https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoN29jUXItTGNPNHc)
 
 ### Implementation details
 
