@@ -20,6 +20,11 @@
 @property (nonatomic, assign, readonly) BOOL isZoomedOut;
 
 /**
+ * If set to false swipe guesture for removing views will be disabled default true
+ */
+@property (nonatomic,assign) BOOL canRemoveOnSwipe;
+
+/**
  * Reloads and re-layouts all the pages in the controller
  */
 - (void)reloadData;

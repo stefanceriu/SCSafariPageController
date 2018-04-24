@@ -33,6 +33,16 @@
 
 @implementation SCSafariPageController
 
+#pragma mark - Defaults Init
+
+- (instancetype)init{
+    self = [super init];
+    if (self){
+        _canRemoveOnSwipe = true;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
@@ -77,9 +87,11 @@
     }];
 	[self.pageViewController.scrollView setScrollEnabled:YES];
 	
-	for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
-		[page setScrollEnabled:YES];
-	}
+    if (self.canRemoveOnSwipe){
+        for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
+            [page setScrollEnabled:YES];
+        }
+    }
 }
 
 - (void)zoomIntoPageAtIndex:(NSUInteger)index animated:(BOOL)animated completion:(void(^)())completion
