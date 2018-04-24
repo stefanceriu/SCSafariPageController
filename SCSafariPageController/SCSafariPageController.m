@@ -65,7 +65,16 @@
 	}
 	
 	self.isZoomedOut = YES;
-	[self.pageViewController setLayouter:self.zoomedOutLayouter animated:animated completion:completion];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [self.pageViewController setLayouter:self.zoomedOutLayouter animated:animated completion:^{
+        if([weakSelf.delegate respondsToSelector:@selector(pageController:didZoomOutAnimated:)]) {
+            [weakSelf.delegate pageController:weakSelf didZoomOutAnimated:animated];
+        }
+        if (completion)
+            completion();
+    }];
 	[self.pageViewController.scrollView setScrollEnabled:YES];
 	
 	for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
@@ -82,7 +91,15 @@
 	self.isZoomedOut = NO;
 	self.currentPage = index;
 	
-	[self.pageViewController setLayouter:self.zoomedInLayouter andFocusOnIndex:index animated:animated completion:completion];
+    __weak typeof(self) weakSelf = self;
+    
+    [self.pageViewController setLayouter:self.zoomedInLayouter andFocusOnIndex:index animated:animated completion:^{
+        if([weakSelf.delegate respondsToSelector:@selector(pageController:didZoomInAnimated:)]) {
+            [weakSelf.delegate pageController:weakSelf didZoomInAnimated:animated];
+        }
+        if (completion)
+            completion();
+    }];
 	[self.pageViewController.scrollView setScrollEnabled:NO];
 	
 	for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
