@@ -25,6 +25,11 @@
 @property (nonatomic,assign) BOOL canRemoveOnSwipe;
 
 /**
+ * Scroll display zoomed out view to top
+ */
+- (void)scrollToTop;
+
+/**
  * Reloads and re-layouts all the pages in the controller
  */
 - (void)reloadData;

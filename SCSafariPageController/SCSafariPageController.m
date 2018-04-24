@@ -68,6 +68,11 @@
 
 #pragma mark - Public
 
+- (void)scrollToTop{
+    [self.pageViewController.scrollView setContentOffset:
+     CGPointMake(0, -self.pageViewController.scrollView.contentInset.top) animated:YES];
+}
+
 - (void)zoomOutAnimated:(BOOL)animated completion:(void(^)())completion
 {
 	if(self.isZoomedOut) {
