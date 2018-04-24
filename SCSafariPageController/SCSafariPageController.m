@@ -78,6 +78,11 @@
 	if(self.isZoomedOut) {
 		return;
 	}
+    
+    if ([self.delegate respondsToSelector:@selector(pageController:shouldZoomOutAnimated:)]) {
+       if (![self.delegate pageController:self shouldZoomOutAnimated:animated])
+           return;
+    }
 	
 	self.isZoomedOut = YES;
     
@@ -105,6 +110,11 @@
 		return;
 	}
 	
+    if ([self.delegate respondsToSelector:@selector(pageController:shouldZoomInAnimated:)]) {
+        if (![self.delegate pageController:self shouldZoomInAnimated:animated])
+            return;
+    }
+    
 	self.isZoomedOut = NO;
 	self.currentPage = index;
 	

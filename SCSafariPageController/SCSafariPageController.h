@@ -219,11 +219,20 @@ didNavigateToPageAtIndex:(NSUInteger)pageIndex;
  */
 - (void)pageController:(SCSafariPageController *)pageController didDeletePageAtIndex:(NSUInteger)pageIndex;
 
+/** Delegate methods that the page controller calls when view
+ * zoom out starts
+ */
+- (BOOL)pageController:(SCSafariPageController *)pageController shouldZoomOutAnimated:(BOOL)animated;
 
 /** Delegate methods that the page controller calls when view
  * has been zoomed out
  */
 - (void)pageController:(SCSafariPageController *)pageController didZoomOutAnimated:(BOOL)animated;
+
+/** Delegate methods that the page controller calls when view
+ * zoom in starts
+ */
+- (BOOL)pageController:(SCSafariPageController *)pageController shouldZoomInAnimated:(BOOL)animated;
 
 /** Delegate methods that the page controller calls when view
  * has been zoomed in
