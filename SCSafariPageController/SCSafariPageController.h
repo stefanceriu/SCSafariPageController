@@ -20,6 +20,16 @@
 @property (nonatomic, assign, readonly) BOOL isZoomedOut;
 
 /**
+ * If set to false swipe guesture for removing views will be disabled default true
+ */
+@property (nonatomic,assign) BOOL canRemoveOnSwipe;
+
+/**
+ * Scroll display zoomed out view to top
+ */
+- (void)scrollToTop;
+
+/**
  * Reloads and re-layouts all the pages in the controller
  */
 - (void)reloadData;
@@ -208,5 +218,25 @@ didNavigateToPageAtIndex:(NSUInteger)pageIndex;
  * has been deleted
  */
 - (void)pageController:(SCSafariPageController *)pageController didDeletePageAtIndex:(NSUInteger)pageIndex;
+
+/** Delegate methods that the page controller calls when view
+ * zoom out starts
+ */
+- (BOOL)pageController:(SCSafariPageController *)pageController shouldZoomOutAnimated:(BOOL)animated;
+
+/** Delegate methods that the page controller calls when view
+ * has been zoomed out
+ */
+- (void)pageController:(SCSafariPageController *)pageController didZoomOutAnimated:(BOOL)animated;
+
+/** Delegate methods that the page controller calls when view
+ * zoom in starts
+ */
+- (BOOL)pageController:(SCSafariPageController *)pageController shouldZoomInAnimated:(BOOL)animated;
+
+/** Delegate methods that the page controller calls when view
+ * has been zoomed in
+ */
+- (void)pageController:(SCSafariPageController *)pageController didZoomInAnimated:(BOOL)animated;
 
 @end

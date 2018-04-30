@@ -33,6 +33,16 @@
 
 @implementation SCSafariPageController
 
+#pragma mark - Defaults Init
+
+- (instancetype)init{
+    self = [super init];
+    if (self){
+        _canRemoveOnSwipe = true;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
@@ -58,19 +68,40 @@
 
 #pragma mark - Public
 
+- (void)scrollToTop{
+    [self.pageViewController.scrollView setContentOffset:
+     CGPointMake(0, -self.pageViewController.scrollView.contentInset.top) animated:YES];
+}
+
 - (void)zoomOutAnimated:(BOOL)animated completion:(void(^)())completion
 {
 	if(self.isZoomedOut) {
 		return;
 	}
+    
+    if ([self.delegate respondsToSelector:@selector(pageController:shouldZoomOutAnimated:)]) {
+       if (![self.delegate pageController:self shouldZoomOutAnimated:animated])
+           return;
+    }
 	
 	self.isZoomedOut = YES;
-	[self.pageViewController setLayouter:self.zoomedOutLayouter animated:animated completion:completion];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [self.pageViewController setLayouter:self.zoomedOutLayouter animated:animated completion:^{
+        if([weakSelf.delegate respondsToSelector:@selector(pageController:didZoomOutAnimated:)]) {
+            [weakSelf.delegate pageController:weakSelf didZoomOutAnimated:animated];
+        }
+        if (completion)
+            completion();
+    }];
 	[self.pageViewController.scrollView setScrollEnabled:YES];
 	
-	for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
-		[page setScrollEnabled:YES];
-	}
+    if (self.canRemoveOnSwipe){
+        for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
+            [page setScrollEnabled:YES];
+        }
+    }
 }
 
 - (void)zoomIntoPageAtIndex:(NSUInteger)index animated:(BOOL)animated completion:(void(^)())completion
@@ -79,10 +110,23 @@
 		return;
 	}
 	
+    if ([self.delegate respondsToSelector:@selector(pageController:shouldZoomInAnimated:)]) {
+        if (![self.delegate pageController:self shouldZoomInAnimated:animated])
+            return;
+    }
+    
 	self.isZoomedOut = NO;
 	self.currentPage = index;
 	
-	[self.pageViewController setLayouter:self.zoomedInLayouter andFocusOnIndex:index animated:animated completion:completion];
+    __weak typeof(self) weakSelf = self;
+    
+    [self.pageViewController setLayouter:self.zoomedInLayouter andFocusOnIndex:index animated:animated completion:^{
+        if([weakSelf.delegate respondsToSelector:@selector(pageController:didZoomInAnimated:)]) {
+            [weakSelf.delegate pageController:weakSelf didZoomInAnimated:animated];
+        }
+        if (completion)
+            completion();
+    }];
 	[self.pageViewController.scrollView setScrollEnabled:NO];
 	
 	for(SCSafariPageWrapperViewController *page in self.pageViewController.loadedViewControllers) {
