@@ -88,7 +88,7 @@
 - (void)animatePageInsertionAtIndex:(NSUInteger)index
 					 viewController:(UIViewController *)viewController
 				 pageViewController:(SCPageViewController *)pageViewController
-						 completion:(void (^)())completion
+						 completion:(void (^)(void))completion
 {
 	CGRect frame = viewController.view.frame;
 	CATransform3D sublayerTransform = [self sublayerTransformForPageWithFrame:frame totalNumberOfPages:pageViewController.numberOfPages contentOffset:CGPointZero];
@@ -108,7 +108,7 @@
 - (void)animatePageDeletionAtIndex:(NSUInteger)index
 					viewController:(UIViewController *)viewController
 				pageViewController:(SCPageViewController *)pageViewController
-						completion:(void (^)())completion
+						completion:(void (^)(void))completion
 {
 	[UIView animateWithDuration:pageViewController.animationDuration animations:^{
 		[viewController.view setFrame:CGRectOffset(viewController.view.frame, -CGRectGetMaxX(viewController.view.bounds), 0.0f)];

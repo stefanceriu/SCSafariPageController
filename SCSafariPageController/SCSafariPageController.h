@@ -26,8 +26,9 @@
 
 /**
  * Scroll display zoomed out view to top
+ * @param animated Whether the transition will be animated
  */
-- (void)scrollToTop;
+- (void)scrollToTopAnimated:(BOOL)animated;
 
 /**
  * Reloads and re-layouts all the pages in the controller
@@ -38,25 +39,25 @@
 /**
  * Reloads and re-layouts the page at the given index
  */
-- (void)reloadPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)())completion;
+- (void)reloadPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)(void))completion;
 
 
 /**
  * Inserts a new page at the given index
  */
-- (void)insertPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)())completion;
+- (void)insertPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)(void))completion;
 
 
 /**
  * Removes the page at the given index
  */
-- (void)deletePagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)())completion;
+- (void)deletePagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)(void))completion;
 
 
 /**
  * Moves the page to the given index
  */
-- (void)movePageAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex animated:(BOOL)animated completion:(void(^)())completion;
+- (void)movePageAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex animated:(BOOL)animated completion:(void(^)(void))completion;
 
 
 /**
@@ -65,19 +66,19 @@
  */
 - (void)navigateToPageAtIndex:(NSUInteger)pageIndex
 					 animated:(BOOL)animated
-				   completion:(void(^)())completion;
+				   completion:(void(^)(void))completion;
 
 
 /**
  * Zooms out to show multiple pages
  */
-- (void)zoomOutAnimated:(BOOL)animated completion:(void(^)())completion;
+- (void)zoomOutAnimated:(BOOL)animated completion:(void(^)(void))completion;
 
 
 /**
  * Zooms into the given page
  */
-- (void)zoomIntoPageAtIndex:(NSUInteger)index animated:(BOOL)animated completion:(void(^)())completion;
+- (void)zoomIntoPageAtIndex:(NSUInteger)index animated:(BOOL)animated completion:(void(^)(void))completion;
 
 
 /**

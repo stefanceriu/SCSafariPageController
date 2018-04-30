@@ -35,11 +35,12 @@
 
 #pragma mark - Defaults Init
 
-- (instancetype)init{
-    self = [super init];
-    if (self){
-        _canRemoveOnSwipe = true;
+- (instancetype)init
+{
+    if(self = [super init]) {
+        _canRemoveOnSwipe = YES;
     }
+    
     return self;
 }
 
@@ -68,12 +69,13 @@
 
 #pragma mark - Public
 
-- (void)scrollToTop{
-    [self.pageViewController.scrollView setContentOffset:
-     CGPointMake(0, -self.pageViewController.scrollView.contentInset.top) animated:YES];
+- (void)scrollToTopAnimated:(BOOL)animated
+{
+    [self.pageViewController.scrollView setContentOffset:CGPointMake(0, -self.pageViewController.scrollView.contentInset.top)
+                                                animated:animated];
 }
 
-- (void)zoomOutAnimated:(BOOL)animated completion:(void(^)())completion
+- (void)zoomOutAnimated:(BOOL)animated completion:(void(^)(void))completion
 {
 	if(self.isZoomedOut) {
 		return;
@@ -104,7 +106,7 @@
     }
 }
 
-- (void)zoomIntoPageAtIndex:(NSUInteger)index animated:(BOOL)animated completion:(void(^)())completion
+- (void)zoomIntoPageAtIndex:(NSUInteger)index animated:(BOOL)animated completion:(void(^)(void))completion
 {
 	if(!self.isZoomedOut) {
 		return;
@@ -235,27 +237,27 @@
 	[self.pageViewController reloadData];
 }
 
-- (void)reloadPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void (^)())completion
+- (void)reloadPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void (^)(void))completion
 {
 	[self.pageViewController reloadPagesAtIndexes:indexes animated:animated completion:completion];
 }
 
-- (void)insertPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void (^)())completion
+- (void)insertPagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void (^)(void))completion
 {
 	[self.pageViewController insertPagesAtIndexes:indexes animated:animated completion:completion];
 }
 
-- (void)deletePagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)())completion
+- (void)deletePagesAtIndexes:(NSIndexSet *)indexes animated:(BOOL)animated completion:(void(^)(void))completion
 {
 	[self.pageViewController deletePagesAtIndexes:indexes animated:animated completion:completion];
 }
 
-- (void)movePageAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex animated:(BOOL)animated completion:(void (^)())completion
+- (void)movePageAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex animated:(BOOL)animated completion:(void (^)(void))completion
 {
 	[self.pageViewController movePageAtIndex:fromIndex toIndex:toIndex animated:animated completion:completion];
 }
 
-- (void)navigateToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated completion:(void (^)())completion
+- (void)navigateToPageAtIndex:(NSUInteger)pageIndex animated:(BOOL)animated completion:(void (^)(void))completion
 {
 	[self.pageViewController navigateToPageAtIndex:pageIndex animated:animated completion:completion];
 }

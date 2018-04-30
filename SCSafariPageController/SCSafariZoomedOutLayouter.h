@@ -26,7 +26,7 @@
 
 /** Used by the pageController when pages are being swiped for deletion
  * @param pageViewController the page view controller where this will be applied
- * @param numberOfPage the total number of pages
+ * @param numberOfPages the total number of pages
  * @return the inter items spacing that will be used for the given values
  */
 - (CGFloat)interItemSpacingForPageViewController:(SCPageViewController *)pageViewController
